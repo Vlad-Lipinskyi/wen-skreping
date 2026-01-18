@@ -1,21 +1,20 @@
 usersDatabase = {}
 
 def registerUser():
-    userLogin = input("Створіть логін: ")
-    if userLogin in usersDatabase:
+    login = input("Створіть логін: ")
+    if login in usersDatabase:
         print("Цей логін вже зайнятий.")
     else:
         password = input("Створіть пароль: ")
-        usersDatabase[userLogin] = password
+        usersDatabase[login] = password
         print("Реєстрація успішна!")
 
 def loginUser():
-    userLogin = input("Логін: ")
-    userPassword = input("Пароль: ")
-    savedPassword = usersDatabase.get(userLogin)
-    
-    if savedPassword == userPassword and savedPassword is not None:
-        print(f"\nВітаємо, {userLogin}!")
+    login = input("Логін: ")
+    password = input("Пароль: ")
+
+    if usersDatabase.get(login) == password:
+        print(f"\nВітаємо, {login}!")
         return True
     else:
         print("Невірний логін або пароль.")
