@@ -1,10 +1,12 @@
 import auth
 import finance
+from colorama import Fore, Style, init
+init() 
 
 def startApp():
     while True:
-        print("\n=== ГОЛОВНЕ МЕНЮ ===")
-        print("1. Реєстрація")
+        print(Fore.RED + "\n=== ГОЛОВНЕ МЕНЮ ===")
+        print(Fore.CYAN + "1. Реєстрація")
         print("2. Вхід")
         print("3. Вихід")
 
