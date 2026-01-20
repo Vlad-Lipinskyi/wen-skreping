@@ -7,8 +7,8 @@ def startApp():
     while True:
         print(Fore.RED + "\n=== ГОЛОВНЕ МЕНЮ ===")
         print(Fore.CYAN + "1. Реєстрація")
-        print("2. Вхід")
-        print("3. Вихід")
+        print(Fore.YELLOW + "2. Вхід")
+        print(Fore.MAGENTA + "3. Вихід")
 
         choice = input("Ваш вибір: ")
 
